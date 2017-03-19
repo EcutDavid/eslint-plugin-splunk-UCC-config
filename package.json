@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-splunk-ucc-config",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Eslint plugin for splunk UCC global configuration file",
   "keywords": [
     "eslint",
@@ -10,16 +10,23 @@
   "author": "David Guan(davidguandev@gmail.com)",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests --recursive"
-  },
-  "dependencies": {
+    "test": "mocha tests --recursive",
+    "build": "babel src -d lib"
   },
   "devDependencies": {
-    "eslint": "~3.9.1",
+    "babel-cli": "^6.24.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "eslint": "^3.9.1",
     "mocha": "^3.1.2"
   },
   "engines": {
     "node": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jsonschema": "^1.1.1",
+    "lodash": "^4.17.4"
+  }
 }
