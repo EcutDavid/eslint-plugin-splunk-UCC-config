@@ -1,7 +1,5 @@
 # eslint-plugin-splunk-ucc-config
 
-### Basic features are in development.
-
 Eslint plugin for Splunk UCC global configuration file
 
 ## Installation
