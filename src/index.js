@@ -22,6 +22,11 @@ module.exports.processors = {
       try {
         configObject = JSON.parse(contentCache[fileName]);
         errors = validator(configObject).errors;
+        errors.forEach(d => {
+          if (d.property) {
+            d.message = `${d.property}: ${d.message}`;
+          }
+        });
       } catch (e) {
         errors.push({message: 'the global config is not a legal JSON file'});
       }
